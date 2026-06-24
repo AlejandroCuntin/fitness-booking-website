@@ -1,0 +1,578 @@
+/* Here we gonna put the reset and the body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* here we put the border-box of the sizing box */
+    font-family: Arial, Helvetica, sans-serif;
+    /* we put the font of the letters */
+}
+
+body {
+    /* now in the body we set the main background to black to look more aestetic */
+    background-color: #181717;
+    /* and now we put the main text color to white for readability */
+    color: #ffffff;
+    line-height: 1.6;
+    /* that's the height of the line of the texts */
+}
+
+/* header that's is in the top of the page's */
+header {
+    background-color: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fe7215e2;
+}
+
+/* the navigations bar in the top of the index */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(247, 242, 242);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* here we can find the sections */
+section {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* that's what we see when we just open the index, the principal page */
+#inicio {
+    /*we gonna remove the global max-width constraint to spans the entire screen */
+    max-width: none;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1") center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    min-height: 60vh;
+
+}
+
+
+#inicio h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#inicio p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #d65803;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #cc5200;
+    color: #ffff;
+}
+
+/* the pricing options */
+.Tarifas {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+    /* Ensures all panels in the row stretch to the same height */
+    border: #9f9d9d;
+}
+
+article.Panel {
+    /* now we put the back ground a little bit diferent to look the division, the diference */
+    margin-bottom: 25px;
+    color: #cccccc;
+    background-color: #101010;
+    border-radius: 8px;
+    padding: 25px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(245, 240, 240, 0.1);
+    /* shadow to make the cards pop in dark */
+
+    /* Turn the panel into a Flexbox column */
+    display: flex;
+    flex-direction: column;
+}
+
+/* This targets the anchor <a> tags that wrap our buttons inside the panel */
+article.Panel a {
+    margin-top: auto;
+    /* Pushes the link (and the button inside it) to the very bottom of the panel */
+    display: block;
+    width: 100%;
+}
+
+article.Panel ul {
+    margin-bottom: 40px;
+    /* Give a little space so the text doesn't touch the buttons */
+}
+
+article.Panel p {
+    /* to put more margin between the bottom and the p text */
+    margin-bottom: 40px;
+    color: #cccccc;
+    flex-grow: 1;
+}
+
+.precio {
+    font-size: 26px;
+    color: #FF6600;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Class here */
+#clases {
+    max-width: none;
+    margin: 0;
+
+    background-color: #111;
+    color: white;
+    border-top: 1px solid #222;
+}
+
+#clases .Panel {
+    background-color: #111;
+    /* different black to see the cards */
+    border: 1px solid #5a5454;
+    padding: 30px;
+}
+
+.seccion-etiqueta {
+    color: #FF6600;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.seccion-titulo {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.acento {
+    color: #FF6600;
+}
+
+/* here the map */
+#ubicacion iframe {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    filter: invert(90%) hue-rotate (180deg);
+}
+
+/* formularies */
+form {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.formulario_fila {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.formulario_unidad {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* we put the labels of white colro */
+    color: #f5f1f1;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333333;
+    color: #f5f1f1
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    margin-top: 60px;
+}
+
+.reservation-row div[style*="display: flex"] {
+    gap: 25px !important; 
+}
+
+.btn-edit, .btn-delete {
+    margin: 0 !important;
+}
+
+.footer_inferior {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+
+.dashboard-hero {
+    text-align: center;
+    padding: 40px 40px 20px;
+}
+
+.dashboard-username {
+    color: #ff6600;
+}
+
+.dashboard-subtitle {
+    color: #888;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.dashboard-section {
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.dashboard-card {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.plan-card {
+    border-color: #ff6600;
+}
+
+main section.dashboard-section {
+    margin-bottom: 80px !important; 
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 15px;
+}
+
+.form-alta-entrenador {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #333; 
+}
+
+.section-header {
+    margin-bottom: 40px !important;
+}
+
+.dashboard-card h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.dashboard-card-icon {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.dashboard-card-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6600;
+    margin: 0;
+}
+
+.dashboard-card-label {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+.dashboard-card-status {
+    font-size: 13px;
+    color: #aaa;
+    margin: 0;
+}
+
+
+
+.status-active {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.qr-card img {
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+.btn-outline:hover {
+    background-color: #ff6600 !important;
+    color: #000 !important;
+}
+
+.reservation-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+}
+
+.reservation-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.reservation-date,
+.reservation-time {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.reservation-level {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: #2a2a2a;
+    color: #ff6600;
+}
+
+.empty-state {
+    background-color: #1a1a1a;
+    border: 1px dashed #333;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    color: #666;
+}
+
+
+.reservation-actions form {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+
+.reservation-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px;
+}
+
+.reservation-actions form {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+}
+
+.btn-edit,
+.btn-delete {
+    width: 100px;
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* we create that for the mobile*/
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* dashboard grid: 4 columns to like aproximately 2 columns on mobile */
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* the sections also we need to change */
+    section {
+        padding: 30px 20px;
+    }
+
+    .dashboard-section {
+        padding: 15px 20px;
+    }
+
+    /* the hero also */
+    #inicio {
+        padding: 60px 20px;
+    }
+
+    #inicio h2 {
+        font-size: 30px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+    /* the pricing cards: stack vertically */
+    .Tarifas {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    article.Panel {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Reservation rows: stack info and buttons vertically */
+    .reservation-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .reservation-actions {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .btn-edit,
+    .btn-delete {
+        flex: 1;
+        text-align: center;
+    }
+
+    /* Forms */
+    .formulario_fila {
+        flex-direction: column;
+    }
+
+    /* Entity tables: make them scrollable horizontally */
+    .entity-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    /* Map iframe */
+    #ubicacion iframe {
+        height: 250px;
+    }
+
+    /* Auth cards */
+    .auth-card {
+        padding: 25px 20px;
+    }
+}
+
+/* FAQ */
+.faq-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.faq-item {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 25px 30px;
+}
+
+.faq-item h3 {
+    color: #ff6600;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.faq-item p {
+    color: #ccc;
+    font-size: 15px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error | UltraFit</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+
+<body>
+
+<header>
+    <div id="logo">UltraFit</div>
+    <nav>
+        <ul>
+            <li><a href="/#inicio">Inicio</a></li>
+            <li><a href="/#precios">Precios</a></li>
+            <li><a href="/#clases">Clases</a></li>
+            <li><a href="/#ubicacion">Ubicación</a></li>
+            <li><a href="/#pedirinformacion">Pedir Información</a></li>
+            <li><a href="/faq">Preguntas Frecuentes</a></li>
+
+            {{#isLoggedIn}}
+                <li><a href="/dashboard">Mi Cuenta</a></li>
+                <li><a href="/logout">Cerrar sesión</a></li>
+            {{/isLoggedIn}}
+
+            {{^isLoggedIn}}
+                <li><a href="/login">Iniciar sesión</a></li>
+            {{/isLoggedIn}}
+        </ul>
+    </nav>
+</header>
+
+<main style="text-align:center; padding:80px;">
+
+    <h1 style="font-size:60px; color:#e63946;">Oops!</h1>
+    <h2>Something went wrong</h2>
+
+    <p style="margin-top:20px;">
+        The page you are looking for does not exist or an unexpected error occurred.
+    </p>
+
+    <a href="/" style="text-decoration:none;">
+        <button style="margin-top:30px;">Return to Home</button>
+    </a>
+
+</main>
+
+</body>
+</html>

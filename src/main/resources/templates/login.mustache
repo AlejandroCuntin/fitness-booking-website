@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | UltraFit</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+
+<body>
+
+<header>
+    <div id="logo">UltraFit</div>
+    <nav>
+        <ul>
+            <li><a href="/#inicio">Inicio</a></li>
+            <li><a href="/#precios">Precios</a></li>
+            <li><a href="/#clases">Clases</a></li>
+            <li><a href="/#ubicacion">Ubicación</a></li>
+            <li><a href="/#pedirinformacion">Pedir Información</a></li>
+            <li><a href="/faq">Preguntas Frecuentes</a></li>
+            
+            {{#isLoggedIn}}
+                <li><a href="/dashboard">Mi Dashboard</a></li>
+                <li><a href="/logout">Cerrar sesión</a></li>
+            {{/isLoggedIn}}
+
+            {{^isLoggedIn}}
+                <li><a href="/login">Iniciar sesión</a></li>
+            {{/isLoggedIn}}
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>LOGUEATE</h2>
+
+        <form action="/login" method="post">
+
+            <div class="formulario_unidad">
+                <label>Usuario</label>
+                <input type="text" name="username"  placeholder = "Escribe tu nombre de usuario" required>
+            </div>
+
+            <div class="formulario_unidad">
+                <label>Contraseña</label>
+                <input type="password" name="password" placeholder = "Escribe tu contraseña"  required>
+            </div>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        {{#error}}
+            <p style="color:#FF6600; text-align:center; margin-top:10px; font-weight: bold;">
+                Invalid username or password.
+            </p>
+        {{/error}}
+
+        <div style="text-align: center; margin-top: 20px;">
+            <p>¿No tienes cuenta? <a href="/register" style="color: #FF6600; text-decoration: none; font-weight: bold;">Regístrate aquí</a></p>
+        </div>
+
+    </section>
+</main>
+
+</body>
+</html>

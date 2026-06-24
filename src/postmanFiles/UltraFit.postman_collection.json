@@ -1,0 +1,435 @@
+{
+  "info": {
+    "_postman_id": "a4d3b6a2-6f8d-4e9b-b0b2-7a8b42f6e5c9",
+    "name": "UltraFit API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET All Members",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8082/api/members",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "members"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET Member by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8082/api/members/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "members",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST Create Member",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8082/api/members",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "members"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"John\",\"surname\":\"Doe\",\"email\":\"john@mail.com\",\"phone\":\"123456789\"}"
+        }
+      }
+    },
+    {
+      "name": "PUT Update Member",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8082/api/members/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "members",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Updated\",\"surname\":\"User\",\"email\":\"new@mail.com\",\"phone\":\"987654321\"}"
+        }
+      }
+    },
+    {
+      "name": "PATCH Member",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8082/api/members/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "members",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"patched@mail.com\"}"
+        }
+      }
+    },
+    {
+      "name": "DELETE Member",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8082/api/members/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "members",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET All Trainers",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8082/api/trainers",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "trainers"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET Trainer by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8082/api/trainers/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "trainers",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST Create Trainer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8082/api/trainers",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "trainers"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Mike\",\"specialty\":\"Yoga\",\"experienceYears\":5}"
+        }
+      }
+    },
+    {
+      "name": "PUT Update Trainer",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8082/api/trainers/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "trainers",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Updated\",\"specialty\":\"Pilates\",\"experienceYears\":10}"
+        }
+      }
+    },
+    {
+      "name": "PATCH Trainer",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8082/api/trainers/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "trainers",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"specialty\":\"Crossfit\"}"
+        }
+      }
+    },
+    {
+      "name": "DELETE Trainer",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8082/api/trainers/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "trainers",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET All Reservations",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8082/api/reservations",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "reservations"
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST Create Reservation",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8082/api/reservations",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "reservations"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"memberId\":1,\"trainerId\":1,\"date\":\"2026-04-20\",\"time\":\"10:00\",\"level\":\"Beginner\"}"
+        }
+      }
+    },
+    {
+      "name": "GET Reservation by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8082/api/reservations/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "reservations",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "PUT Update Reservation",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8082/api/reservations/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "reservations",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"memberId\":1,\"trainerId\":1,\"date\":\"2026-05-01\",\"time\":\"11:00\",\"level\":\"Intermediate\"}"
+        }
+      }
+    },
+    {
+      "name": "PATCH Reservation",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8082/api/reservations/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "reservations",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"level\":\"Advanced\"}"
+        }
+      }
+    },
+    {
+      "name": "DELETE Reservation",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8082/api/reservations/1",
+          "protocol": "http",
+          "host": [
+            "localhost:8082"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "reservations",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}

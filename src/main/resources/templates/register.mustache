@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join Us | UltraFit</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+
+<header>
+    <div id="logo">UltraFit</div>
+    <nav>
+        <ul>
+            <li><a href="/#inicio">Inicio</a></li>
+            <li><a href="/#precios">Precios</a></li>
+            <li><a href="/#clases">Clases</a></li>
+            <li><a href="/#ubicacion">Ubicación</a></li>
+            <li><a href="/#pedirinformacion">Pedir Información</a></li>
+            <li><a href="/faq">Preguntas Frecuentes</a></li>
+
+            {{#isLoggedIn}}
+                <li><a href="/dashboard">Mi Cuenta</a></li>
+                <li><a href="/logout">Cerrar sesión</a></li>
+            {{/isLoggedIn}}
+
+            {{^isLoggedIn}}
+                <li><a href="/login">Iniciar sesión</a></li>
+            {{/isLoggedIn}}
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>CREA TU CUENTA</h2>
+
+        <form action="/register" method="post">
+            <div class="formulario_unidad">
+                <label>Usuario</label>
+                <input type="text" name="username" placeholder="Elige un nombre de usuario" required>
+            </div>
+
+            <div class="formulario_unidad">
+                <label>Contraseña</label>
+                <input type="password" name="password" placeholder="Crea tu contraseña" required>
+            </div>
+
+            <button type="submit">Registrate ahora</button>
+            {{#errorExists}}
+            <p style="color:#FF6600; text-align:center; margin-top:10px; font-weight:bold;">
+                Ese nombre de usuario ya está en uso. Elige otro.
+            </p>
+            {{/errorExists}}
+        </form>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <p>Ya tienes una cuenta? <a href="/login" style="color: #FF6600; text-decoration: none;">Logueate aqui</a></p>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

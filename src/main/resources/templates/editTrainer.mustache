@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Entrenador | UltraFit</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+<header>
+    <div id="logo">UltraFit</div>
+    <nav>
+        <ul>
+            <li><a href="/#inicio">Inicio</a></li>
+            <li><a href="/#precios">Precios</a></li>
+            <li><a href="/#clases">Clases</a></li>
+            <li><a href="/#ubicacion">Ubicación</a></li>
+            <li><a href="/#pedirinformacion">Pedir Información</a></li>
+            <li><a href="/faq">Preguntas Frecuentes</a></li>
+
+            {{#isLoggedIn}}
+                <li><a href="/dashboard">Mi Cuenta</a></li>
+
+                <li><a href="/logout">Cerrar sesión</a></li>
+            {{/isLoggedIn}}
+
+            {{^isLoggedIn}}
+                <li><a href="/login">Iniciar sesión</a></li>
+            {{/isLoggedIn}}
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="dashboard-section">
+        <div class="section-header">
+            <h2>Gestión de: <span style="color: #ff6600;">{{trainer.name}}</span></h2>
+        </div>
+
+        <div class="form-card" style="margin-bottom: 30px;">
+            <h3 style="margin-bottom: 15px;">Actualización Completa (PUT)</h3>
+            <form action="/trainers/update" method="post">
+                <input type="hidden" name="id" value="{{trainer.id}}">
+                
+                <div class="formulario_fila">
+                    <div class="formulario_unidad">
+                        <label>Nombre</label>
+                        <input type="text" name="name" value="{{trainer.name}}" required>
+                    </div>
+                    <div class="formulario_unidad">
+                        <label>Especialidad</label>
+                        <input type="text" name="specialty" value="{{trainer.specialty}}" required>
+                    </div>
+                </div>
+                <div class="formulario_unidad" style="margin-top: 15px;">
+                    <label>Años de Experiencia</label>
+                    <input type="number" name="experienceYears" value="{{trainer.experienceYears}}" required>
+                </div>
+                <button type="submit" style="margin-top: 20px;">Guardar Todos los Datos</button>
+            </form>
+        </div>
+
+        <div class="form-card" style="border: 1px solid #ff6600;">
+            <h3 style="margin-bottom: 15px; color: #ff6600;">Actualización (PATCH)</h3>
+            <p style="color: #aaa; margin-bottom: 15px; font-size: 14px;">Usa este formulario para cambiar únicamente la especialidad, sin enviar el resto de datos.</p>
+            <form action="/trainers/patch" method="post">
+                <input type="hidden" name="id" value="{{trainer.id}}">
+                
+                <div class="formulario_fila">
+                    <div class="formulario_unidad">
+                        <label>Nueva Especialidad</label>
+                        <input type="text" name="specialty" placeholder="Escribe la nueva especialidad" required>
+                    </div>
+                </div>
+                <button type="submit" style="margin-top: 15px; background-color: #ff6600; color: black;">Aplicar Parche (PATCH)</button>
+            </form>
+        </div>
+
+    </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>

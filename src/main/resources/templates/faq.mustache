@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ | UltraFit</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+
+<header>
+    <div id="logo">UltraFit</div>
+    <nav>
+        <ul>
+            <li><a href="/#inicio">Inicio</a></li>
+            <li><a href="/#precios">Precios</a></li>
+            <li><a href="/#clases">Clases</a></li>
+            <li><a href="/#ubicacion">Ubicación</a></li>
+            <li><a href="/#pedirinformacion">Pedir Información</a></li>
+            <li><a href="/faq">Preguntas Frecuentes</a></li>
+
+            {{#isLoggedIn}}
+                <li><a href="/dashboard">Mi Cuenta</a></li>
+                <li><a href="/logout">Cerrar sesión</a></li>
+            {{/isLoggedIn}}
+
+            {{^isLoggedIn}}
+                <li><a href="/login">Iniciar sesión</a></li>
+            {{/isLoggedIn}}
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="faq-lista">
+
+            <div class="faq-item">
+                <h3>¿Cómo puedo hacerme socio?</h3>
+                <p>Puedes registrarte directamente en nuestra web o pasarte por cualquiera de nuestros centros. El proceso es rápido y sin papeleo.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Puedo cancelar mi membresía en cualquier momento?</h3>
+                <p>Sí, sin permanencia. Solo necesitas avisar con 15 días de antelación y gestionamos la baja sin coste adicional.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Qué incluye el Plan Premium?</h3>
+                <p>Acceso ilimitado a todas las instalaciones, clases grupales, zona spa y un entrenador personal asignado desde el primer día.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Puedo cambiar de plan?</h3>
+                <p>Sí, puedes subir o bajar de plan desde tu cuenta en cualquier momento. El cambio se aplica al inicio del siguiente mes.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Las clases grupales tienen límite de plazas?</h3>
+                <p>Sí, cada clase tiene un máximo de 20 personas. Puedes reservar tu plaza fácilmente desde el dashboard de tu cuenta.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>¿Hay aparcamiento disponible?</h3>
+                <p>Sí, contamos con parking gratuito para socios en todos nuestros centros. Solo necesitas mostrar tu tarjeta de socio.</p>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer_inferior">
+        <p>&copy; 2024 UltraFit. Todos los derechos reservados</p>
+    </div>
+</footer>
+
+</body>
+</html>

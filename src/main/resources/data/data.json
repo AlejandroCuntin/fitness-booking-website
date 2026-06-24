@@ -1,0 +1,12 @@
+{
+  "members": [
+    { "id": 1, "name": "Ana", "surname": "García", "email": "ana@ultrafit.com", "phone": "600111222", "plan": "Premium Plan" },
+    { "id": 2, "name": "Carlos", "surname": "López", "email": "carlos@ultrafit.com", "phone": "600333444", "plan": "Basic Plan" },
+    { "id": 3, "name": "María", "surname": "Ruiz", "email": "maria@ultrafit.com", "phone": "600555666", "plan": "Pro Plan" }
+  ],
+  "trainers": [
+    { "id": 1, "name": "Pedro Martínez", "specialty": "Yoga", "experienceYears": 5 },
+    { "id": 2, "name": "Laura Sánchez", "specialty": "Boxing", "experienceYears": 8 },
+    { "id": 3, "name": "Javi Torres", "specialty": "CrossFit", "experienceYears": 3 }
+  ]
+}

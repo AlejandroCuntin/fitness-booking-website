@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar reserva | UltraFit</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+
+<body>
+
+<header>
+    <div id="logo">UltraFit</div>
+    <nav>
+        <ul>
+            <li><a href="/#inicio">Inicio</a></li>
+            <li><a href="/#precios">Precios</a></li>
+            <li><a href="/#clases">Clases</a></li>
+            <li><a href="/#ubicacion">Ubicación</a></li>
+            <li><a href="/#pedirinformacion">Pedir Información</a></li>
+            <li><a href="/faq">Preguntas Frecuentes</a></li>
+
+            {{#isLoggedIn}}
+                <li><a href="/dashboard">Mi Cuenta</a></li>
+
+                <li><a href="/logout">Cerrar sesión</a></li>
+            {{/isLoggedIn}}
+
+            {{^isLoggedIn}}
+                <li><a href="/login">Iniciar sesión</a></li>
+            {{/isLoggedIn}}
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="dashboard-section">
+        <h2>Gestionar Reserva #{{reservation.id}}</h2>
+
+        <div class="form-card" style="margin-bottom: 20px;">
+            <h3>Modificar Fecha y Hora (UPDATE)</h3>
+            <form action="/reservations/update" method="post">
+                <input type="hidden" name="id" value="{{reservation.id}}">
+                <input type="hidden" name="memberId" value="{{reservation.memberId}}">
+                <input type="hidden" name="trainerId" value="{{reservation.trainerId}}">
+                <input type="hidden" name="level" value="{{reservation.level}}">
+
+                <div class="formulario_fila">
+                    <div class="formulario_unidad">
+                        <label>Fecha</label>
+                        <input type="date" name="date" value="{{reservation.date}}" required>
+                    </div>
+                    <div class="formulario_unidad">
+                        <label>Hora</label>
+                        <input type="time" name="time" value="{{reservation.time}}" required>
+                    </div>
+                </div>
+                <button type="submit">Actualizar Cita Completa</button>
+            </form>
+        </div>
+
+        <div class="form-card" style="border: 1px solid #ff6600;">
+            <h3 style="color: #ff6600;">Cambio de Nivel Rápido (PATCH)</h3>
+            <form action="/reservations/patch" method="post">
+                <input type="hidden" name="id" value="{{reservation.id}}">
+                <div class="formulario_unidad">
+                    <label>Nuevo Nivel de Intensidad</label>
+                    <select name="level" required>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+                <button type="submit" style="background-color: #ff6600; color: black; margin-top: 10px;">Aplicar Parche</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer_inferior">
+        <p>&copy; 2024 UltraFit. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
