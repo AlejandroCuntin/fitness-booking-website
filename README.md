@@ -4,7 +4,7 @@ UltraFit is a personal training and fitness membership management web applicatio
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 *   **User Authentication & Authorization:** Simple and secure session-based authentication using standard servlet `HttpSession` (no Spring Security configuration required).
 *   **Interactive Dashboard:** A dashboard for gym members where they can:
@@ -19,7 +19,7 @@ UltraFit is a personal training and fitness membership management web applicatio
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 *   **Backend Framework:** Spring Boot 3.2.5
 *   **Programming Language:** Java 17
@@ -31,7 +31,7 @@ UltraFit is a personal training and fitness membership management web applicatio
 
 ---
 
-## ⚙️ Prerequisites
+##  Prerequisites
 
 To run this application locally, you will need:
 - **Java Development Kit (JDK) 17** or higher.
@@ -39,7 +39,7 @@ To run this application locally, you will need:
 
 ---
 
-## 💻 Installation & Quick Start
+##  Installation & Quick Start
 
 1.  **Clone the Repository:**
     ```bash
@@ -69,7 +69,7 @@ To run this application locally, you will need:
 
 ---
 
-## 🔑 Default Seed Data & Testing Credentials
+##  Default Seed Data & Testing Credentials
 
 The application uses an automatic SQL initializer that populates the database on every startup. You can test the platform immediately using the default credentials:
 
@@ -83,7 +83,7 @@ The application uses an automatic SQL initializer that populates the database on
 
 ---
 
-## 🗄️ Database Console (H2 Console)
+##  Database Console (H2 Console)
 
 You can manage the database tables directly through the browser console. Use the following credentials on the login form:
 
@@ -97,7 +97,7 @@ You can manage the database tables directly through the browser console. Use the
 
 ---
 
-## 🔌 REST API Endpoints
+##  REST API Endpoints
 
 The project exposes a complete set of RESTful JSON endpoints under `/api`. Below are the base paths:
 
@@ -112,6 +112,6 @@ A preconfigured Postman collection is included in the project directory for test
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
